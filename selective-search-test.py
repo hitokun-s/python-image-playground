@@ -9,10 +9,10 @@ img = io.imread(image_file)
 rects = []
 dlib.find_candidate_object_locations(img, rects, min_size=1000)
 
-win = dlib.image_window()
-win.set_image(img)
+# win = dlib.image_window()
+# win.set_image(img)
 for k, d in enumerate(rects):
     print("Detection {}: Left: {} Top: {} Right: {} Bottom: {}".format(
             k, d.left(), d.top(), d.right(), d.bottom()))
-    win.add_overlay(d)
-dlib.hit_enter_to_continue()
+    # win.add_overlay(d)
+# dlib.hit_enter_to_continue()
